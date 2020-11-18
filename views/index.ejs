@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Chuck Norris Jokes</title>
+</head>
+<body class="container">
+    <h1 class="jumbotron text-center">Chuck Norris Joke Generator 🤠 </h1>
+    <p>To get a random Chuck Norris Joke, click the category and button below! 👇</p>
+    <div class="row">
+        <div class="col-xs-6 col-xs-offset-6">
+            <form action="/" method="POST">
+                <% categories.forEach(function(category){ %>
+                <div class ='form-group row'>
+                <label for="<%= category %>"><%= category %></label>
+                <input type="radio" id ="<%= category %>" name ="category" value="<%= category %>">
+            </div>
+        <% }) %>
+                <button class="btn btn-success" name='jokes' type="submit">Get Joke
+                </button>
+            </form>
+    </div>
+</div>
+<hr>
+<div id ="chuckJoke" class="row col-xs-8 col-xs-offset-2">
+    <% if (joke) { %>
+        <h2> <%= joke.value %></h2>
+        <% } else { %>
+            <h3 class='text-center text-info'>
+                Push the button
+            </h3>
+            <%  } %>
+        </div>	
+    </body>
+    </html>
+
+
+
+
+    <!-- <form action="/" method="GET">  -->
+    <!-- <select name="category"> -->
+        <!-- <option value ='animal'>Animal</option>
+        <option value ='career'>Career</option>
+        <option value ='celebrity'>Celebrity</option>
+        <option value ='dev'>Dev</option>
+        <option value ='explicit'>Explicit</option>
+        <option value ='fashion'>Fashion</option>
+        <option value ='food'>Food</option>
+        <option value ='history'>History</option>
+        <option value ='money'>Money</option>
+        <option value ='music'>Music</option>
+        <option value ='political'>Political</option>
+        <option value ='religion'>Religion</option>
+        <option value ='science'>Science</option>
+        <option value ='sport'>Sport</option>
+        <option value ='travel'>Travel</option>
+      </select> -->
+      
+    
+    <!-- </form> -->

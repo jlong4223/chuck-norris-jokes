@@ -13,4 +13,4 @@ An app connected to an API that will generate random Chuck Norries jokes by cate
 - HTML
 
 ## Getting Started
-[Click Here](https://github.com/jlong4223/chuck-norris-jokes.git) to see the deployed app!
+[Click Here](https://random-chucknorris-jokes.herokuapp.com/) to see the deployed app!
